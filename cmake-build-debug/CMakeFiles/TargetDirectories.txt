@@ -1,0 +1,3 @@
+C:/Users/ariki/CLionProjects/Ex3_solver/cmake-build-debug/CMakeFiles/solver.dir
+C:/Users/ariki/CLionProjects/Ex3_solver/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ariki/CLionProjects/Ex3_solver/cmake-build-debug/CMakeFiles/rebuild_cache.dir
