@@ -86,11 +86,11 @@ namespace solver
     }
     RealVariable operator==(const double num, const RealVariable& x)
     {
-        return x == num;
+        return RealVariable(x.a * 1, x.b * 1, x.c - num);
     }
     RealVariable operator==(const RealVariable& rv1, const RealVariable& rv2)
     {
-        return RealVariable(rv1.a - rv2.a, rv1.a - rv2.b , rv1.c - rv2.c);
+        return RealVariable(rv1.a - rv2.a, rv1.b - rv2.b , rv1.c - rv2.c);
     }
 
     //ComplexVariable
@@ -129,6 +129,14 @@ namespace solver
     {
         return ComplexVariable(x.a * num , x.b * num , x.c * num);
     }
+//    ComplexVariable operator*(const ComplexVariable& cv1, const ComplexVariable& cv2)
+//    {
+//        if(cv1.a * cv2.a == 0 && cv1.b * cv2.a==0 && cv1.a * cv2.b==0)
+//        {
+//            return ComplexVariable(cv1.b * cv2.b, cv1.b * cv2.c + cv1.c * cv2.b, cv1.c * cv2.c);
+//        }
+//        throw std::runtime_error("Power greater than 2");
+//    }
 
     ComplexVariable operator/(const ComplexVariable& x, const complex<double> num)
     {
